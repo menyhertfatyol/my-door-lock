@@ -21,4 +21,24 @@ RSpec.describe DoorlockHelper, type: :helper do
       end
     end
   end
+
+  describe 'background_color' do
+    context 'when door is open' do
+      it 'sets the background color to warning' do
+        expect(helper.background_color('open')).to eq 'bg-warning'
+      end
+    end
+
+    context 'when door is locked' do
+      it 'sets the background color to info' do
+        expect(helper.background_color('locked')).to eq 'bg-info'
+      end
+    end
+
+    context 'when no data received' do
+      it 'sets the background color to danger' do
+        expect(helper.background_color('No data received...')).to eq 'bg-danger'
+      end
+    end
+  end
 end

@@ -7,4 +7,15 @@ module DoorlockHelper
       last_lock_state.state
     end
   end
+
+  def background_color(last_lock_state)
+    case last_lock_state
+    when 'open'
+      'bg-warning'
+    when 'locked'
+      'bg-info'
+    else
+      'bg-danger'
+    end
+  end
 end
