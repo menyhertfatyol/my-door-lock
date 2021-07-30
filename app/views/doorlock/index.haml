@@ -1,3 +1,4 @@
 .container
   .card.text-center.shadow.mb-5.rounded{class: background_color(lock_state(@doorlock))}
-    %h1{id: 'high-margin-top'}= lock_state @doorlock
+    %h3{id: 'high-margin-top'}= t'front_door'
+    %h1= translate @doorlock
