@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip
 
 gem 'jbuilder', '~> 2.7'
+gem 'net-imap', require: false
+gem 'net-pop', require: false
 gem 'net-smtp', require: false
 gem 'pg', '~> 1.1'
 gem 'puma', '~> 5.0'
